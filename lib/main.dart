@@ -2,11 +2,16 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: MyApp(),
+    home: translateApp(),
   ));
 }
 
-class MyApp extends StatelessWidget {
+class translateApp extends StatefulWidget {
+  @override
+  _translateAppState createState() => _translateAppState();
+}
+
+class _translateAppState extends State<translateApp> {
   IconData staricon = Icons.star_border;
   @override
   Widget build(BuildContext context) {
@@ -264,10 +269,11 @@ class MyApp extends StatelessWidget {
                                       icon: Icon(staricon),
                                       onPressed: () {
                                         if (staricon == Icons.star_border) {
-                                          staricon = Icons.email;
+                                          staricon = Icons.star;
                                         } else {
                                           staricon = Icons.star_border;
                                         }
+                                        setState(() {});
                                       },
                                     ),
                                   ),
