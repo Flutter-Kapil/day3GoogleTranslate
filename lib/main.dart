@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: translateApp(),
+    home: TranslateApp(),
   ));
 }
 
-class translateApp extends StatefulWidget {
+class TranslateApp extends StatefulWidget {
   @override
-  _translateAppState createState() => _translateAppState();
+  _TranslateAppState createState() => _TranslateAppState();
 }
 
-class _translateAppState extends State<translateApp> {
+class _TranslateAppState extends State<TranslateApp> {
   IconData staricon = Icons.star_border;
   Widget _topHalf() {
     return Container(
@@ -269,8 +269,14 @@ class _translateAppState extends State<translateApp> {
                         children: <Widget>[
                           IconButton(
                             icon: Icon(Icons.content_copy),
+                            color: Colors.white,
+                            onPressed: (){},
                           ),
-                          IconButton(icon: Icon(Icons.more_vert)),
+                          IconButton(
+                            icon: Icon(Icons.more_vert),
+                            color: Colors.white,
+                            onPressed: (){},
+                          ),
                         ],
                       ),
                     )
