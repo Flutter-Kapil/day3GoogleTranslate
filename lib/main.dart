@@ -270,12 +270,12 @@ class _TranslateAppState extends State<TranslateApp> {
                           IconButton(
                             icon: Icon(Icons.content_copy),
                             color: Colors.white,
-                            onPressed: (){},
+                            onPressed: () {},
                           ),
                           IconButton(
                             icon: Icon(Icons.more_vert),
                             color: Colors.white,
-                            onPressed: (){},
+                            onPressed: () {},
                           ),
                         ],
                       ),
