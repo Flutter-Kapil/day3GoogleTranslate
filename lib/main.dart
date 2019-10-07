@@ -196,92 +196,90 @@ class _TranslateAppState extends State<TranslateApp> {
         children: <Widget>[
           Expanded(
             flex: 2,
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(10.0, 4.0, 10.0, 1.0),
-              child: Card(
-//                margin: EdgeInsets.all(2),
-                color: Colors.blue,
-                elevation: 2.0,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: <Widget>[
-                    Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          Expanded(
-                            flex: 5,
-                            child: Row(
-                              children: <Widget>[
-                                Container(
-                                  alignment: Alignment.centerRight,
-                                  child: Icon(
-                                    Icons.volume_down,
-//
-                                  ),
+            child: Card(
+              margin: EdgeInsets.all(8),
+              color: Colors.blue,
+              elevation: 2.0,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Expanded(
+                          flex: 5,
+                          child: Row(
+                            children: <Widget>[
+                              Container(
+                                alignment: Alignment.centerRight,
+                                child: Icon(
+                                  Icons.volume_down,
+                                  color: Colors.white,
                                 ),
-                                Container(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    'INDONESIAN',
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.white),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            flex: 1,
-                            child: Container(
-                              child: IconButton(
-                                icon: Icon(staricon),
-                                onPressed: () {
-                                  if (staricon == Icons.star_border) {
-                                    staricon = Icons.star;
-                                  } else {
-                                    staricon = Icons.star_border;
-                                  }
-                                  setState(() {});
-                                },
                               ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(6, 0, 6, 0),
-                        child: Container(
-                          alignment: Alignment.topLeft,
-                          child: Text(
-                            'Selamat Pagi',
-                            style: TextStyle(fontSize: 18, color: Colors.white),
+                              Container(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  'INDONESIAN',
+                                  style: TextStyle(
+                                      fontSize: 16, color: Colors.white),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            child: IconButton(
+                              icon: Icon(staricon),
+                              color: Colors.white,
+                              onPressed: () {
+                                if (staricon == Icons.star_border) {
+                                  staricon = Icons.star;
+                                } else {
+                                  staricon = Icons.star_border;
+                                }
+                                setState(() {});
+                              },
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        'Selamat Pagi',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
                     ),
-                    Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          IconButton(
-                            icon: Icon(Icons.content_copy),
-                            color: Colors.white,
-                            onPressed: () {},
-                          ),
-                          IconButton(
-                            icon: Icon(Icons.more_vert),
-                            color: Colors.white,
-                            onPressed: () {},
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        IconButton(
+                          icon: Icon(Icons.content_copy),
+                          color: Colors.white,
+                          onPressed: () {},
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.more_vert),
+                          color: Colors.white,
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  )
+                ],
               ),
             ),
           ),
