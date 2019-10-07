@@ -194,140 +194,123 @@ class _TranslateAppState extends State<TranslateApp> {
       color: Colors.white70,
       child: Column(
         children: <Widget>[
-          Expanded(
-            flex: 2,
-            child: Card(
-              margin: EdgeInsets.all(8),
-              color: Colors.blue,
-              elevation: 2.0,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: <Widget>[
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: <Widget>[
-                        Expanded(
-                          flex: 5,
-                          child: Row(
-                            children: <Widget>[
-                              Container(
-                                alignment: Alignment.centerRight,
-                                child: Icon(
-                                  Icons.volume_down,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Container(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'INDONESIAN',
-                                  style: TextStyle(
-                                      fontSize: 16, color: Colors.white),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Container(
-                            child: IconButton(
-                              icon: Icon(staricon),
+          Card(
+            margin: EdgeInsets.all(8),
+            color: Colors.blue,
+            elevation: 2.0,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 5,
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            alignment: Alignment.centerRight,
+                            child: Icon(
+                              Icons.volume_down,
                               color: Colors.white,
-                              onPressed: () {
-                                if (staricon == Icons.star_border) {
-                                  staricon = Icons.star;
-                                } else {
-                                  staricon = Icons.star_border;
-                                }
-                                setState(() {});
-                              },
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        'Selamat Pagi',
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              'INDONESIAN',
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.white),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: <Widget>[
-                        IconButton(
-                          icon: Icon(Icons.content_copy),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        child: IconButton(
+                          icon: Icon(staricon),
                           color: Colors.white,
-                          onPressed: () {},
+                          onPressed: () {
+                            if (staricon == Icons.star_border) {
+                              staricon = Icons.star;
+                            } else {
+                              staricon = Icons.star_border;
+                            }
+                            setState(() {});
+                          },
                         ),
-                        IconButton(
-                          icon: Icon(Icons.more_vert),
-                          color: Colors.white,
-                          onPressed: () {},
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          Expanded(
-            flex: 2,
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(10.0, 2.0, 10.0, 0.0),
-              child: Card(
-                color: Colors.white,
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.fromLTRB(15, 12, 15, 2),
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'DEFINITIONS',
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.fromLTRB(15, 3, 15, 5),
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'exclaimation',
-                        style: TextStyle(color: Colors.black.withOpacity(0.6)),
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.fromLTRB(20.0, 1.0, 20.0, 2.0),
-                      margin: EdgeInsets.all(5.0),
-                      alignment: Alignment.center,
-                      child: Text(
-                        'expressing good wishes on meeting or'
-                        'parting during the morning',
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
-                      alignment: Alignment.center,
-                      child: Text(
-                        '\"He walked into Stein\'s lounge on Tuesday morning,'
-                        ' bidding good morning to everyone who lined his route'
-                        'to the top table.\"   ',
-                        style: TextStyle(color: Colors.black.withOpacity(0.6)),
                       ),
                     ),
                   ],
                 ),
-              ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(5, 0, 5, 5),
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    'Selamat Pagi',
+                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    IconButton(
+                      icon: Icon(Icons.content_copy),
+                      color: Colors.white,
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.more_vert),
+                      color: Colors.white,
+                      onPressed: () {},
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+          Card(
+            margin: EdgeInsets.all(8),
+            color: Colors.white,
+            child: Column(
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.fromLTRB(15, 12, 15, 2),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'DEFINITIONS',
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(15, 3, 15, 5),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'exclaimation',
+                    style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(20.0, 1.0, 20.0, 2.0),
+                  margin: EdgeInsets.all(5.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'expressing good wishes on meeting or'
+                    'parting during the morning',
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    '\"He walked into Stein\'s lounge on Tuesday morning,'
+                    ' bidding good morning to everyone who lined his route'
+                    'to the top table.\"   ',
+                    style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                  ),
+                ),
+              ],
             ),
           )
         ],
